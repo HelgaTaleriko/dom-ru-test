@@ -1,10 +1,8 @@
-
 export const mapTableData = (securities, marketdata) => {
   const result = securities.map((secItem) => {
     const marketItem = marketdata.find(
       (markItem) => markItem.SECID === secItem.SECID,
     );
-
     const tableItem = {
       /** код */
       secId: secItem.SECID,
@@ -27,8 +25,9 @@ export const mapTableData = (securities, marketdata) => {
       /** дата */
       updateTime: marketItem.UPDATETIME,
     };
-
-    return tableItem;
+    if (marketItem === undefined) {
+      throw new Error("Массив не найден");
+    }
   });
 
   return result;

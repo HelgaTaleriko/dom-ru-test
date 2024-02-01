@@ -1,0 +1,36 @@
+td {
+    padding: 1vw 1.5vw;
+    border-top: 0.1vw solid #A098AE;
+}
+
+
+tbody tr:hover {
+    border-left: 0.3vw solid #4D44B5;
+}
+
+.secId {
+    color: #4D44B5;
+    font-weight: bold;
+}
+
+.shortName {
+    color: #303972;
+    font-weight: bold;
+    text-wrap: none;
+}
+
+.lastPrice,
+.lasttoprevprice,
+.openPrice,
+.lowPrice,
+.highPrice,
+.averagePrice,
+.valToday {
+    color: #303972;
+    font-weight: normal;
+    text-align: right;
+}
+
+.updateTime {
+    color: #A098AE;
+}

@@ -1,0 +1,27 @@
+.items{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vw ;
+    gap: 0.5vw;
+    width: 20vw;
+    font-size: 1.1vw;
+    font-weight: bold;
+    height: 100%;
+
+}
+
+li {
+    list-style-type: none;
+    padding: 1vw 0 1vw 2vw;
+    color: #C1BBEB;
+
+
+}
+li:hover{
+    background-color: #F3F4FF;
+    border-radius: 4vw 0 0 4vw;
+    color:#4D44B5;
+    transition: background-color 1s;
+
+
+}
