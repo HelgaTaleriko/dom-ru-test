@@ -27,6 +27,8 @@ export const mapTableData = (securities, marketdata) => {
     };
     if (marketItem === undefined) {
       throw new Error("Массив не найден");
+    } else {
+      return tableItem
     }
   });
 
