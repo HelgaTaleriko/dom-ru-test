@@ -3,6 +3,11 @@ export const mapTableData = (securities, marketdata) => {
     const marketItem = marketdata.find(
       (markItem) => markItem.SECID === secItem.SECID,
     );
+
+    if (marketItem == undefined) {
+      console.log(`Цены для ${secItem.SECID} не найдены`);
+      return undefined;
+    }
     const tableItem = {
       /** код */
       secId: secItem.SECID,
@@ -25,12 +30,9 @@ export const mapTableData = (securities, marketdata) => {
       /** дата */
       updateTime: marketItem.UPDATETIME,
     };
-    if (marketItem === undefined) {
-      throw new Error("Массив не найден");
-    } else {
-      return tableItem
-    }
+
+    return tableItem;
   });
 
-  return result;
+  return result.filter((item) => item !== undefined);
 };
