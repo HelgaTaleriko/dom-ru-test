@@ -4,6 +4,7 @@ import { mapTableData } from "../utils/mapTableData";
 import { Main } from "./Main/Main";
 import { SideMenu } from "./SideMenu/SideMenu";
 import "./MainPage.css";
+import {getResource} from "../utils/getResource";
 
 const moexHost = "https://iss.moex.com/";
 /** Получить данные по рынку */
@@ -16,10 +17,7 @@ export const MainPage = () => {
   const [tableData, setTableData] = useState([]);
 
   useEffect(() => {
-    fetch(`${moexHost}${marketPath}?${marketParams}`)
-      .then((res) => {
-        return res.json();
-      })
+    getResource(`${moexHost}${marketPath}?${marketParams}`)
       .then((body) => {
         const { securities, marketdata } = mapBody(body);
         const result = mapTableData(securities, marketdata);
@@ -33,7 +31,7 @@ export const MainPage = () => {
   return (
     <div className="main-page">
       <SideMenu />
-      <Main tableData={tableData} />
+      <Main tableData={tableData}  />
     </div>
   );
 };
