@@ -1,0 +1,24 @@
+.button-update{
+    background-color: #F3F4FF;
+    color: #4D44B5;
+    border: 0.1vw solid #4D44B5;
+    border-radius: 4vw;
+    padding: 1vw 2vw;
+    margin-left: 0;
+    margin-right: auto;
+    font-size: 1vw;
+    font-weight: bold;
+    width: 15vw;
+    transition: background-color 0.5s
+
+}
+.button-update:hover{
+    background-color: #4D44B5;
+    color: white;
+}
+.button-update:active{
+    background-color: #F3F4FF;
+    color: #4D44B5;
+
+}
+

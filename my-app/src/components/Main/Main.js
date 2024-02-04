@@ -6,7 +6,7 @@ export const Main = ({ tableData }) => {
   return (
     <div className="main">
       <Header />
-      <Table tableData={tableData} />
+      <Table tableData={tableData}  />
     </div>
   );
 };
