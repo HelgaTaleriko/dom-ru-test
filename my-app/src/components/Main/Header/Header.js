@@ -3,11 +3,11 @@ import {ButtonUpdate} from "./ButtonUpdate/ButtonUpdate";
 import {HeaderTitle} from "./HeaderTitle/HeaderTitle";
 
 
-export const Header = ({Tbody}) => {
+export const Header = ({onUpdate}) => {
     return (
         <div className="header">
             <HeaderTitle/>
-            <ButtonUpdate tableData={Tbody}/>
+            <ButtonUpdate onUpdate={onUpdate}/>
         </div>
     );
 };
