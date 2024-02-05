@@ -1,6 +1,9 @@
 import './ButtonUpdate.css'
 
-export const ButtonUpdate=({Tbody})=>{
-return<button className='button-update' onClick={Tbody}>Обновить данные</button>
+export const ButtonUpdate = ({onUpdate}) => {
+    return (
+        <button className='button-update' onClick={onUpdate}>
+            Обновить данные
+        </button>)
 }
 
